@@ -65,6 +65,14 @@ mepower | jq
 
 ## Installation
 
+macOS:
+
+```bash
+brew install hrbrmstr/tap/mepower 
+```
+
+Cargo:
+
 ```bash
 cargo install --git https://github.com/hrbrmstr/mepower --branch batman
 ```
