@@ -20,10 +20,11 @@ use clap::Parser;
 )]
 struct Args {}
 
-fn main() -> Result<(), Error> {
+#[tokio::main]
+async fn main() -> Result<(), Error> {
 	let _ = Args::parse();
 
-	let outages = lib::get_outages();
+	let outages = lib::get_outages().await;
 
 	outages.into_iter().for_each(|outage| {
 		let res = serde_json::to_string(&outage).expect("Error serializing outage info to JSON.");
@@ -31,5 +32,4 @@ fn main() -> Result<(), Error> {
 	});
 
 	Ok(())
-
 }
