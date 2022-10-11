@@ -21,3 +21,12 @@ serde = "1.0.145"
 serde_derive = "1.0.145"
 serde_json = "1.0.85"
 titlecase = "2.2.1"
+chrono = "0.4.22"
+
+[lib]
+name = "cmpco"
+path = "src/lib.rs"
+
+[[bin]]
+name = "mepower"
+path = "src/main.rs"
